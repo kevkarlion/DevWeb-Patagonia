@@ -1,8 +1,16 @@
+'use client'
 import { Brand } from "@/types/brand";
 import Image from "next/image";
 import brandsData from "./brandsData";
+import WOW from "wowjs";
+import { useEffect } from "react";
 
 const Brands = () => {
+  
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
     <section className="pt-16">
       <div className="container">

@@ -1,22 +1,24 @@
-"use client";
+"use client"
 
 
 import { useState, useEffect } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import "animate.css";
+import  WOW  from "wowjs";
 
 
 
-import { WOW } from "wowjs";
+
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
+
   useEffect(() => {
-    const wow = new WOW();
-    wow.init();
+    new WOW.WOW().init();
   }, []);
+
   return (
-    <section className="relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="relative z-10 py-16 md:py-20 lg:py-28" id="propuesta">
       <div className="container">
         <SectionTitle
           title="Porque elegirnos"
