@@ -12,7 +12,7 @@ const SectionTitle = ({
   mb?: string;
 }) => {
   return (
-    <>
+    <div>
       <div
         className={`w-full ${center ? "mx-auto text-center" : ""}`}
         style={{ maxWidth: width, marginBottom: mb }}
@@ -24,7 +24,7 @@ const SectionTitle = ({
           {paragraph}
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

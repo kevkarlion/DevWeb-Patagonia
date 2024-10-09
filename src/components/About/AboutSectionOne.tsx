@@ -1,5 +1,10 @@
+'use client'
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import { useEffect } from "react";
+import WOW from "wowjs";
+
+
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -7,16 +12,23 @@ const checkIcon = (
   </svg>
 );
 
-const AboutSectionOne = () => {
-  const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
-        {checkIcon}
-      </span>
-      {text}
-    </p>
-  );
 
+const AboutSectionOne = () => {
+  const List = ({ text, description, number }) => (
+    <div className="mb-5 wow fadeInUp" data-wow-delay={`${number * 0.2}s`}>
+      <p className="flex items-center text-lg font-medium text-body-color">
+        <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+          {checkIcon}
+        </span>
+        <span className="mr-2 text-primary font-bold">{number}.</span> {text}
+      </p>
+      <p className="ml-[44px] text-sm text-body-color">{description}</p>
+    </div>
+  );
+  
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
@@ -24,33 +36,49 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="Nuestro Proceso de Trabajo"
+                paragraph="Cada proyecto de diseño web es único, y hemos perfeccionado un proceso de trabajo que garantiza que entreguemos soluciones personalizadas y de alta calidad. A continuación, te explicamos cada paso clave en nuestro proceso de trabajo."
                 mb="44px"
               />
 
-              <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
+              <div className="mb-12 max-w-[570px] lg:mb-0" data-wow-delay=".15s">
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List
+                      text="Consulta y Estrategia"
+                      description="Iniciamos con una consulta detallada para entender tus necesidades, objetivos y público objetivo. Definimos una estrategia que garantizará que tu sitio web no solo sea atractivo, sino también funcional y orientado a la conversión."
+                      number={1}
+                    />
+                    <List
+                      text="Diseño UX/UI"
+                      description="Creamos un diseño intuitivo y centrado en el usuario, priorizando la experiencia de navegación (UX) y un interfaz visualmente atractiva (UI), con el objetivo de captar la atención de tus usuarios desde el primer clic."
+                      number={2}
+                    />
+                    <List
+                      text="Desarrollo y Optimización"
+                      description="Desarrollamos tu sitio web utilizando las últimas tecnologías, asegurando que sea rápido, seguro y esté optimizado para motores de búsqueda (SEO). Nos enfocamos en la conversión y en que tu página cargue rápidamente."
+                      number={3}
+                    />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List
+                      text="Pruebas y Lanzamiento"
+                      description="Realizamos pruebas exhaustivas en diferentes dispositivos y navegadores para garantizar que todo funcione a la perfección. Una vez que todo está listo, lanzamos tu sitio web de manera segura y eficiente."
+                      number={4}
+                    />
+                    <List
+                      text="Mantenimiento Continuo"
+                      description="Ofrecemos mantenimiento continuo para asegurarnos de que tu sitio web siga funcionando de manera óptima. Esto incluye actualizaciones regulares, monitoreo de rendimiento y ajustes según sea necesario."
+                      number={5}
+                    />
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
+              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0 wow fadeInRight" data-wow-delay=".5s">
                 <Image
                   src="/images/about/about-image.svg"
                   alt="about-image"

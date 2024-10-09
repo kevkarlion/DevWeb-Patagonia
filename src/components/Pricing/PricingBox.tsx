@@ -1,18 +1,18 @@
 const PricingBox = (props: {
   price: string;
-  duration: string;
-  packageName: string;
-  subtitle: string;
-  children: React.ReactNode;
+  duration?: string;
+  packageName?: string;
+  subtitle?: string;
+  children?: React.ReactNode;
 }) => {
   const { price, duration, packageName, subtitle, children } = props;
 
   return (
     <div className="w-full">
       <div className="relative z-10 rounded-sm bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark">
-        <div className="flex items-center justify-between">
-          <h3 className="price mb-2 text-[32px] font-bold text-black dark:text-white">
-            $<span className="amount">{price}</span>
+        <div className="flex items-center justify-center w-auto">
+          <h3 className="price mb-2 text-[28px] font-bold text-black dark:text-white">
+            <span className="amount">{price}</span>
             <span className="time text-lg font-medium text-body-color">
               /{duration}
             </span>

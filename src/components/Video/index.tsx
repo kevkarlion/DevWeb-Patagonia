@@ -1,62 +1,142 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
-import SectionTitle from "../Common/SectionTitle";
 
-import ModalVideo from "react-modal-video";
+import { useState, useEffect } from "react";
+import SectionTitle from "../Common/SectionTitle";
+import "animate.css";
+
+
+
+import { WOW } from "wowjs";
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
-
+  useEffect(() => {
+    const wow = new WOW();
+    wow.init();
+  }, []);
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="We are ready to help"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Porque elegirnos"
+          paragraph="Cada proyecto es único, por eso nos aseguramos de diseñar y desarrollar sitios web que se adapten perfectamente a las necesidades de tu negocio."
           center
           mb="80px"
         />
 
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">
+            Nuestros Servicios
+          </h2>
+          <p className="mt-4 text-center text-xl text-white">
+            Estas son algunas de las razones por las que nuestros clientes nos
+            confían sus proyectos.
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* Card 1 */}
             <div
-              className="mx-auto max-w-[770px] overflow-hidden rounded-md"
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
               data-wow-delay=".15s"
             >
-              <div className="relative aspect-[77/40] items-center justify-center">
-                <Image src="/images/video/video.jpg" alt="video image" fill />
-                <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
-                  <button
-                    aria-label="video play button"
-                    onClick={() => setOpen(true)}
-                    className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
-                  >
-                    <svg
-                      width="16"
-                      height="18"
-                      viewBox="0 0 16 18"
-                      className="fill-current"
-                    >
-                      <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.499999 17.564 0.499999 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold text-gray-900">
+                Plantillas o Diseños Personalizados
+              </h3>
+              <p className="mt-4 flex-grow text-gray-600">
+                Elige entre nuestras plantillas profesionales o trabaja en un
+                diseño personalizado que refleje la identidad única de tu marca.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              data-wow-delay=".3s"
+            >
+              <h3 className="text-xl font-semibold text-gray-900">
+                Diseño responsivo y optimizado
+              </h3>
+              <p className="mt-4 flex-grow text-gray-600">
+                Nuestros sitios funcionan perfectamente en cualquier
+                dispositivo, garantizando una experiencia fluida.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              data-wow-delay=".45s"
+            >
+              <h3 className="text-xl font-semibold text-gray-900">
+                Desarrollo en Next.js o WordPress
+              </h3>
+              <p className="mt-4 flex-grow text-gray-600">
+                Ofrecemos sitios personalizados con Next.js o la flexibilidad de
+                WordPress. Te ayudamos a elegir la mejor opción para impulsar tu
+                emprendimiento en el mundo digital.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              data-wow-delay=".6s"
+            >
+              <h3 className="text-xl font-semibold text-gray-900">
+                Orientación a resultados
+              </h3>
+              <p className="mt-4 flex-grow text-gray-600">
+                Nos enfocamos en hacer crecer tu negocio con webs que generan
+                impacto y resultados.
+              </p>
+            </div>
+
+            {/* Card 5 */}
+            <div
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              data-wow-delay=".75s"
+            >
+              <h3 className="text-xl font-semibold text-gray-900">
+                Soporte continuo
+              </h3>
+              <p className="mt-4 flex-grow text-gray-600">
+                Ofrecemos mantenimiento para que tu sitio esté siempre
+                actualizado y en funcionamiento.
+              </p>
+            </div>
+
+            {/* Card 6 */}
+            <div
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              data-wow-delay=".9s"
+            >
+              <h3 className="text-xl font-semibold text-gray-900">
+                Relación calidad-precio
+              </h3>
+              <p className="mt-4 flex-grow text-gray-600">
+                Precios justos y transparentes, con soluciones de alta calidad a
+                un costo accesible.
+              </p>
+            </div>
+
+            {/* Card 7 - SEO */}
+            <div
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              data-wow-delay="1.05s"
+            >
+              <h3 className="text-xl font-semibold text-gray-900">
+                SEO para atraer clientes de calidad
+              </h3>
+              <p className="mt-4 flex-grow text-gray-600">
+                Un buen SEO mejora la visibilidad en motores de búsqueda y atrae
+                clientes cualificados. Es clave para el éxito de cualquier
+                emprendimiento online.
+              </p>
             </div>
           </div>
         </div>
       </div>
-
-      <ModalVideo
-        channel="youtube"
-        autoplay={true}
-        start={true}
-        isOpen={isOpen}
-        videoId="L61p2uyiMSo"
-        onClose={() => setOpen(false)}
-      />
 
       <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
     </section>

@@ -4,23 +4,24 @@ import featuresData from "./featuresData";
 
 const Features = () => {
   return (
-    <>
+    <div>
       <section id="features" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="Main Features"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title="Soluciones web diseñadas para impulsar tu negocio"
+            paragraph="Ofrecemos servicios de desarrollo web adaptados a tu emprendimiento, desde sitios responsivos hasta tiendas online con pasarelas de pago. Nos enfocamos en crear webs rápidas, seguras y escalables, que mejoran la experiencia de usuario y posicionan tu marca. ¿Listo para llevar tu negocio al siguiente nivel?"
+            width="800px"
             center
           />
 
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-2">
             {featuresData.map((feature) => (
               <SingleFeature key={feature.id} feature={feature} />
             ))}
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

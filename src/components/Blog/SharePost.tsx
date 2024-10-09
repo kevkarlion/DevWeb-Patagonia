@@ -1,6 +1,6 @@
 const SharePost = () => {
   return (
-    <div>
+    <>
       <a
         href="#0"
         aria-label="social-share"
@@ -53,7 +53,7 @@ const SharePost = () => {
           />
         </svg>
       </a>
-    </div>
+    </>
   );
 };
 

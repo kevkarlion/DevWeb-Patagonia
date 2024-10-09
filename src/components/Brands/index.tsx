@@ -9,9 +9,45 @@ const Brands = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div className="flex flex-wrap items-center justify-center rounded-sm bg-gray-light px-8 py-8 dark:bg-gray-dark sm:px-10 md:px-[50px] md:py-[40px] xl:p-[50px] 2xl:px-[70px] 2xl:py-[60px]">
-              {brandsData.map((brand) => (
-                <SingleBrand key={brand.id} brand={brand} />
-              ))}
+              <div className="importance-web-section wow animate__animated animate__fadeInUp">
+                <h3 className="mb-4 text-center text-3xl font-bold">
+                  ¿Por qué es importante tener una web profesional?
+                </h3>
+                <p className="mb-6 text-center text-lg">
+                  En el mundo digital actual, una web es mucho más que un
+                  escaparate. Es una herramienta clave para{" "}
+                  <span className="font-bold">
+                    convertir visitas en clientes
+                  </span>
+                  , mejorar tu{" "}
+                  <span className="font-bold">
+                    visibilidad en buscadores (SEO)
+                  </span>{" "}
+                  y generar confianza en tus productos o servicios.
+                </p>
+
+                <p className="text-md mb-4 text-center">
+                  Nuestra experiencia se centra en crear sitios optimizados para
+                  lograr <span className="font-bold">conversión efectiva</span>,
+                  ayudando a que los usuarios tomen acciones que impulsen tu
+                  negocio. Además, trabajamos con clientes de{" "}
+                  <span className="font-bold">alta calidad</span>, adaptándonos
+                  a las necesidades de cada proyecto para garantizar los mejores
+                  resultados.
+                </p>
+
+                <p className="text-md mb-4 text-center">
+                  <span className="font-bold">Un buen SEO</span> no solo te
+                  coloca en las primeras posiciones de Google, sino que también
+                  asegura que los clientes correctos encuentren tu marca. Con
+                  nuestra ayuda, podrás potenciar tu presencia en línea y
+                  alcanzar un público mayor.
+                </p>
+
+                <p className="text-center text-lg font-bold">
+                  ¡Tu web es tu mejor vendedor 24/7!
+                </p>
+              </div>
             </div>
           </div>
         </div>

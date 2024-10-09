@@ -11,8 +11,8 @@ const Pricing = () => {
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Planes y Tarifas"
+          paragraph="Elige el plan que mejor se adapte a tus necesidades."
           center
           width="665px"
         />
@@ -59,43 +59,46 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="Básico"
+            price={"$200US"}
+            // duration={isMonthly ? "mo" : "yr"}
+            subtitle=" Empresas y emprendedores que buscan establecer su presencia en línea de manera efectiva y asequible."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="One page" status="active" />
+            <OfferList text="Optimización SEO básica" status="active" />
+            <OfferList text="Soporte mensual" status="active" />
+            <OfferList text="Diseño responsive" status="active" />
+            <OfferList text="Integración con redes sociales" status="active" />
+            
           </PricingBox>
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="Profesional"
+            price={"$400US"}
+            // duration={isMonthly ? "mo" : "yr"}
+            subtitle="Empresas y emprendedores que desean fortalecer su presencia en el mundo digital de manera estratégica y efectiva."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Landing Page / One page" status="active" />
+            <OfferList text="Optimización SEO avanzada" status="active" />
+            <OfferList text="Soporte mensual por 3 meses FREE" status="active" />
+            <OfferList text="Diseño responsivo" status="active" />
+            <OfferList text="Integración con redes sociales" status="active" />
+            <OfferList text="Mantenimiento y actualizaciónes mensuales" status="active" />
+            {/* <OfferList text="Free Lifetime Updates" status="inactive" /> */}
           </PricingBox>
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="Profesional"
+            price={"$600US"}
+            // duration={isMonthly ? "mo" : "yr"}
+            subtitle="Organizaciones y negocios que buscan un desarrollo web integral para destacar en el mercado y atraer a más clientes."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text="Ecommerce/Langing/One Page" status="active" />
+            <OfferList text="Diseño de marca" status="active" />
+            <OfferList text="Diseño responsivo" status="active" />
+            <OfferList text="Optimización SEO completa" status="active" />
+            <OfferList text="Soporte por 6 meses Free" status="active" />
+            <OfferList text="Prioridad en mantenimiento y actualizaciones" status="active" />
+            <OfferList text="Análisis de rendimiento" status="active" />
+            <OfferList text="Integración con redes sociales" status="active" />
           </PricingBox>
         </div>
       </div>
