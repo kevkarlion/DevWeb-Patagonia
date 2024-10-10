@@ -45,35 +45,54 @@ const Header = () => {
           sticky
             ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
             : "absolute bg-transparent"
-        }`}
-        id="home"
+        }`} 
       >
         <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12">
-              <Link
+          <div className="relative -mx-4 flex items-center justify-between h-[120px]">
+            <div className="w-60 max-w-full px-4 xl:mr-12 relative">
+
+
+            <Link
                 href="/"
                 className={`header-logo block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
-                <Image
-                  src="/images/logo/logo-2.svg"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="w-full dark:hidden"
-                />
-                <Image
-                  src="/images/logo/logo.svg"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="hidden w-full dark:block"
-                />
+                
+
+                  <div className="w-18 h-20" style={{ position:'relative', top:'35px'}}>
+                    <Image
+                      src="/images/logo/devweb4.svg"
+                      alt="logo"
+                      objectFit="contain"
+                      className="w-full dark:hidden"
+                      fill
+                    />
+                  </div>
+                
+
+
+                 
+                <div className="w-18 h-20" style={{ position:'relative', bottom:'45px'}}>
+                    <Image
+                      src="/images/logo/devweb4.svg"
+                      alt="logo"
+                      objectFit="contain"
+                      className="hidden w-full dark:block"
+                      fill
+                    />
+                  </div>
+                
+
+
+
               </Link>
+
+
+
+
             </div>
-            <div className="flex w-full items-center justify-between px-4">
+            <div className="flex w-full items-center justify-between px-4 ">
               <div className="mr-9">
                 <button
                   onClick={navbarToggleHandler}
