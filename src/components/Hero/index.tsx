@@ -29,7 +29,7 @@ const Hero = () => {
             <div className="flex justify-center md:items-center "> 
               <div className="w-[32rem] h-[32rem] relative bottom-6 md:right-16 lg:right-0 lg:bottom-16" >
                 <Image
-                  src="/images/logo/devweb1.svg"
+                  src="/images/logo/devweb5.svg"
                   alt="logo"
                   style={{objectFit: 'contain'}}
                   className="w-full dark:block"

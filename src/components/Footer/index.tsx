@@ -14,7 +14,7 @@ const Footer = () => {
                 <Link href="/" className="mb-8 inline-block w-18 h-20">
                 <div className="w-36 h-40" style={{ position:'relative', top: '-55px'}}>
                     <Image
-                      src="/images/logo/devweb1.svg"
+                      src="/images/logo/devweb5.svg"
                       alt="logo"
                       style={{objectFit: 'contain'}}
                       className="w-full dark:block"
