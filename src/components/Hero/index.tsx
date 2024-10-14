@@ -6,20 +6,36 @@ const Hero = () => {
     <div>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[140px] 2xl:pb-[200px] 2xl:pt-[180px]"
       >
         <div className="container ">
           <div className="-mx-4 flex flex-col w-full md:flex-row justify-center md:justify-evenly ">
             <div className=" px-4 flex w-full	">
               <div className="mx-auto max-w-[800px] text-left flex flex-col mt-9 ">
-                <h1 className="mb-5 text-center font-extrabold md:text-left  text-4xl leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-7xl md:leading-tight uppercase md:normal-case	">
-                  Desarrollo y Diseño web a medida
-                </h1>
-                <p className="mb-12 text-base text-left !leading-relaxed text-black font-semibold dark:text-body-color-dark sm:text-lg md:text-2xl">
-                Lleva tu negocio al siguiente nivel con soluciones web personalizadas.
-                Creamos sitios web profesionales, rápidos y optimizados para ayudarte a destacar en línea, alcanzar más clientes y hacer crecer tu marca. Tu éxito digital comienza aquí.
-                </p>
-                
+              <h1 className="mb-6 text-center font-extrabold text-4xl md:text-5xl leading-snug text-gray-800 dark:text-white sm:text-4xl md:text-left">
+                <span className="block text-[#d42629]">Diseño Web a Medida</span>
+                para Emprendedores - 
+                <span className="text-[#d42629]">Económico, Rápido</span> 
+                y <span className="text-[#d42629]">Optimizado</span> para Tu Negocio
+              </h1>
+              <h2 className="mb-4 text-left font-bold text-2xl md:text-2xl leading-tight text-gray-700 dark:text-gray-300">
+                Ofrecemos Soluciones de Diseño Web Profesionales que se Adaptan a Tu Presupuesto y Necesidades
+              </h2>
+
+
+                <div className="text-gray-700 space-y-4">
+                {/* <ul className="list-disc list-inside mb-12">
+                  <li className="dark:text-white"><span className="font-semibold text-[#d42629] ">Diseño a medida</span> para páginas web, one page, landing pages y tiendas online.</li>
+                  <li className="dark:text-white"><span className="font-semibold text-[#d42629]">Optimización SEO</span> para mejorar tu posicionamiento en buscadores.</li>
+                  <li className="dark:text-white"><span className="font-semibold text-[#d42629]">Mantenimiento mensual</span> y actualizaciones constantes.</li>
+                  <li className="dark:text-white"><span className="font-semibold text-[#d42629]">Soporte técnico</span> para resolver cualquier problema.</li>
+                  <li className="dark:text-white"><span className="font-semibold text-[#d42629]">Soluciones personalizadas</span> según las necesidades de cada emprendedor.</li>
+                </ul> */}
+              </div>
+                <button className="bg-[#d42629] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#b01f21] transition duration-300 ease-in-out mb-16">
+                      Solicita tu Consultoría Gratis
+                </button>
+
               </div>
             </div>
             

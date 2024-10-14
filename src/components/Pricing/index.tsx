@@ -1,128 +1,80 @@
-"use client"
-import { useState } from "react";
-import SectionTitle from "../Common/SectionTitle";
-import OfferList from "./OfferList";
-import PricingBox from "./PricingBox";
+'use client'
+import { useEffect } from 'react';
+import { ContactCTA } from '@/components/Cta'
+import WOW from 'wowjs';
 
-const Pricing = () => {
-  const [isMonthly, setIsMonthly] = useState(true);
+const PricingSection = () => {
+ 
+ 
+  useEffect(() => {
+    // Este bloque de código solo se ejecuta en el cliente
+    const WOW = require('wowjs'); // Mueve esta línea aquí
+    new WOW.WOW().init();
+  }, []);
 
   return (
-    <section id="precios" className="relative z-10 py-16 md:py-20 lg:py-28" style={{scrollMarginTop:'90px'}}>
-      <div className="container">
-        <SectionTitle
-          title="Planes y Tarifas"
-          paragraph="Elige el plan que mejor se adapte a tus necesidades."
-          center
-          width="665px"
-        />
-
-        <div className="w-full">
-          
-        </div>
-
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          <PricingBox
-            packageName="Básico"
-            price={"$200USD"}
-            // duration={isMonthly ? "mo" : "yr"}
-            subtitle=" Empresas y emprendedores que buscan establecer su presencia en línea de manera efectiva y asequible."
-          >
-            <OfferList text="One page" status="active" />
-            <OfferList text="Optimización SEO básica" status="active" />
-            <OfferList text="Soporte mensual" status="active" />
-            <OfferList text="Diseño responsive" status="active" />
-            <OfferList text="Integración con redes sociales" status="active" />
-            
-          </PricingBox>
-          <PricingBox
-            packageName="Profesional"
-            price={"$400USD"}
-            // duration={isMonthly ? "mo" : "yr"}
-            subtitle="Empresas y emprendedores que desean fortalecer su presencia en el mundo digital de manera estratégica y efectiva."
-          >
-            <OfferList text="Landing Page / One page" status="active" />
-            <OfferList text="Optimización SEO avanzada" status="active" />
-            <OfferList text="Soporte mensual por 3 meses FREE" status="active" />
-            <OfferList text="Diseño responsivo" status="active" />
-            <OfferList text="Integración con redes sociales" status="active" />
-            <OfferList text="Mantenimiento y actualizaciónes mensuales" status="active" />
-            {/* <OfferList text="Free Lifetime Updates" status="inactive" /> */}
-          </PricingBox>
-          <PricingBox
-            packageName="Premium"
-            price={"$600USD"}
-            // duration={isMonthly ? "mo" : "yr"}
-            subtitle="Soluciones avanzadas para empresas que buscan destacar con una web a medida, optimizada para resultados y escalabilidad."
-          >
-            <OfferList text="Ecommerce/Langing/One Page" status="active" />
-            <OfferList text="Diseño de marca" status="active" />
-            <OfferList text="Diseño responsivo" status="active" />
-            <OfferList text="Optimización SEO completa" status="active" />
-            <OfferList text="Soporte por 6 meses Free" status="active" />
-            <OfferList text="Prioridad en mantenimiento y actualizaciones" status="active" />
-            <OfferList text="Análisis de rendimiento" status="active" />
-            <OfferList text="Integración con redes sociales" status="active" />
-          </PricingBox>
-        </div>
+    <div className="py-12 bg-gray-50 dark:bg-black"  id='precios'  style={{scrollMarginTop:'90px'}}>
+      <div className="max-w-5xl mx-auto text-center ">
+        <h2 className="mb-6 text-center font-extrabold text-4xl md:text-5xl leading-snug text-gray-800 dark:text-white sm:text-4xl  ">
+          Tarifas y Opciones de Servicio
+        </h2>
+        <p className="mb-10 text-gray-600 wow fadeIn text-lg dark:text-white">
+          Puedes tener tu web desde <span className="font-bold text-[#d42629]">$200USD</span>. 
+          Ofrecemos soluciones a medida para emprendedores, y aquí te damos una idea de nuestros servicios:
+        </p>
       </div>
 
-      <div className="absolute bottom-0 left-0 z-[-1]">
-        <svg
-          width="239"
-          height="601"
-          viewBox="0 0 239 601"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            opacity="0.3"
-            x="-184.451"
-            y="600.973"
-            width="196"
-            height="541.607"
-            rx="2"
-            transform="rotate(-128.7 -184.451 600.973)"
-            fill="url(#paint0_linear_93:235)"
-          />
-          <rect
-            opacity="0.3"
-            x="-188.201"
-            y="385.272"
-            width="59.7544"
-            height="541.607"
-            rx="2"
-            transform="rotate(-128.7 -188.201 385.272)"
-            fill="url(#paint1_linear_93:235)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_93:235"
-              x1="-90.1184"
-              y1="420.414"
-              x2="-90.1184"
-              y2="1131.65"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-            </linearGradient>
-            <linearGradient
-              id="paint1_linear_93:235"
-              x1="-159.441"
-              y1="204.714"
-              x2="-159.441"
-              y2="915.952"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 ">
+        {/* Diseño Web */}
+        <div className="p-6 bg-white shadow-lg rounded-lg wow fadeIn dark:bg-slate-800">
+          <h3 className="text-xl font-semibold text-[#d42629]">Diseño Web Personalizado</h3>
+          <p className="text-gray-700 dark:text-white">
+            Creamos páginas web adaptadas a tus necesidades específicas.
+          </p>
+        </div>
+
+        {/* One Page */}
+        <div className="p-6 bg-white shadow-lg rounded-lg wow fadeIn dark:bg-slate-800">
+          <h3 className="text-xl font-semibold text-[#d42629]">One Page</h3>
+          <p className="text-gray-700 dark:text-white">
+            Ideal para proyectos sencillos y directos.
+          </p>
+        </div>
+
+        {/* Landing Page */}
+        <div className="p-6 bg-white shadow-lg rounded-lg wow fadeIn dark:bg-slate-800">
+          <h3 className="text-xl font-semibold text-[#d42629]">Landing Page</h3>
+          <p className="text-gray-700 dark:text-white">
+            Captura leads de manera efectiva con un diseño atractivo.
+          </p>
+        </div>
+
+        {/* E-commerce */}
+        <div className="p-6 bg-white shadow-lg rounded-lg wow fadeIn dark:bg-slate-800">
+          <h3 className="text-xl font-semibold text-[#d42629]">E-commerce</h3>
+          <p className="text-gray-700 dark:text-white">
+            Potencia tus ventas con una tienda online a medida.
+          </p>
+        </div>
+
+        {/* SEO y Mantenimiento */}
+        <div className="p-6 bg-white shadow-lg rounded-lg wow fadeIn dark:bg-slate-800">
+          <h3 className="text-xl font-semibold text-[#d42629]">SEO y Mantenimiento</h3>
+          <p className="text-gray-700 dark:text-white">
+            Aseguramos que tu web se mantenga optimizada y actualizada.
+          </p>
+        </div>
+        
       </div>
-    </section>
+      <p className="text-lg md:text-2xl font-medium text-gray-800 dark:text-white text-center mb-2 mt-14">
+        ¿Listo para comenzar tu proyecto?
+      </p>
+      <p className="text-sm md:text-xl text-gray-600 dark:text-gray-300 text-center mb-4">
+        ¡Hablemos sobre tu idea!
+      </p>
+      <ContactCTA buttonText='Contactanos' />
+    </div>
   );
 };
 
-export default Pricing;
+export default PricingSection;
