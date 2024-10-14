@@ -8,7 +8,10 @@ import { useEffect } from "react";
 const Brands = () => {
   
   useEffect(() => {
-    new WOW.WOW().init();
+    if (typeof window !== 'undefined') {
+      const WOW = require('wowjs'); // Utilizamos require dentro del efecto
+      new WOW.WOW().init();
+    }
   }, []);
 
   return (

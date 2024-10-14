@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import "animate.css";
 import  WOW  from "wowjs";
+import dynamic from 'next/dynamic';
 
 
 
@@ -13,8 +14,13 @@ import  WOW  from "wowjs";
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
 
+  
+
   useEffect(() => {
-    new WOW.WOW().init();
+    if (typeof window !== 'undefined') {
+      const WOW = require('wowjs'); // Utilizamos require dentro del efecto
+      new WOW.WOW().init();
+    }
   }, []);
 
   return (

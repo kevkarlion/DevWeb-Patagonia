@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/codemod": "^14.2.15",
     "animate.css": "^4.1.1",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.1.0",

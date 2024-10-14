@@ -64,7 +64,7 @@ const Header = () => {
                     <Image
                       src="/images/logo/devweb4.svg"
                       alt="logo"
-                      objectFit="contain"
+                      style={{objectFit: 'contain'}}
                       className="w-full dark:hidden"
                       fill
                     />
@@ -77,7 +77,7 @@ const Header = () => {
                     <Image
                       src="/images/logo/devweb4.svg"
                       alt="logo"
-                      objectFit="contain"
+                      style={{objectFit: 'contain'}}
                       className="hidden w-full dark:block"
                       fill
                     />

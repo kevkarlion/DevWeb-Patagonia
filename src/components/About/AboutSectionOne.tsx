@@ -25,9 +25,15 @@ const AboutSectionOne = () => {
       <p className="ml-[44px] text-sm text-body-color">{description}</p>
     </div>
   );
-  
+
+
+
+  //windows no corre del lado del servidor
   useEffect(() => {
-    new WOW.WOW().init();
+    if (typeof window !== 'undefined') {
+      const WOW = require('wowjs'); // Utilizamos require dentro del efecto
+      new WOW.WOW().init();
+    }
   }, []);
 
   
