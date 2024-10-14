@@ -39,7 +39,7 @@ const Header = () => {
   const usePathName = usePathname();
 
   return (
-    <div id="home" style={{scrollMarginTop:'80px'}}>
+    <div id="home" >
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center ${
           sticky
@@ -49,9 +49,9 @@ const Header = () => {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between h-[120px]">
+
+            
             <div className="w-60 max-w-full px-4 xl:mr-12 relative">
-
-
             <Link
                 href="/"
                 className={`header-logo block w-full ${
@@ -87,11 +87,10 @@ const Header = () => {
 
 
               </Link>
-
-
-
-
             </div>
+
+
+
             <div className="flex w-full items-center justify-between px-4 ">
               <div className="mr-9">
                 <button
