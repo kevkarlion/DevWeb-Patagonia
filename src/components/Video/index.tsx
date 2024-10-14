@@ -45,13 +45,13 @@ const Video = () => {
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Card 1 */}
             <div
-              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white  dark:bg-stroke-dark p-6 shadow-lg"
               data-wow-delay=".15s"
             >
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Plantillas o Diseños Personalizados
               </h3>
-              <p className="mt-4 flex-grow text-gray-600">
+              <p className="mt-4 flex-grow text-gray-600 dark:text-white">
                 Elige entre nuestras plantillas profesionales o trabaja en un
                 diseño personalizado que refleje la identidad única de tu marca.
               </p>
@@ -59,13 +59,13 @@ const Video = () => {
 
             {/* Card 2 */}
             <div
-              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg dark:bg-stroke-dark"
               data-wow-delay=".3s"
             >
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Diseño responsivo y optimizado
               </h3>
-              <p className="mt-4 flex-grow text-gray-600">
+              <p className="mt-4 flex-grow text-gray-600 dark:text-white">
                 Nuestros sitios funcionan perfectamente en cualquier
                 dispositivo, garantizando una experiencia fluida.
               </p>
@@ -73,13 +73,13 @@ const Video = () => {
 
             {/* Card 3 */}
             <div
-              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg dark:bg-stroke-dark"
               data-wow-delay=".45s"
             >
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Desarrollo en Next.js o WordPress
               </h3>
-              <p className="mt-4 flex-grow text-gray-600">
+              <p className="mt-4 flex-grow text-gray-600 dark:text-white">
                 Ofrecemos sitios personalizados con Next.js o la flexibilidad de
                 WordPress. Te ayudamos a elegir la mejor opción para impulsar tu
                 emprendimiento en el mundo digital.
@@ -88,13 +88,13 @@ const Video = () => {
 
             {/* Card 4 */}
             <div
-              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg dark:bg-stroke-dark"
               data-wow-delay=".6s"
             >
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Orientación a resultados
               </h3>
-              <p className="mt-4 flex-grow text-gray-600">
+              <p className="mt-4 flex-grow text-gray-600 dark:text-white">
                 Nos enfocamos en hacer crecer tu negocio con webs que generan
                 impacto y resultados.
               </p>
@@ -102,13 +102,13 @@ const Video = () => {
 
             {/* Card 5 */}
             <div
-              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg dark:bg-stroke-dark"
               data-wow-delay=".75s"
             >
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Soporte continuo
               </h3>
-              <p className="mt-4 flex-grow text-gray-600">
+              <p className="mt-4 flex-grow text-gray-600 dark:text-white">
                 Ofrecemos mantenimiento para que tu sitio esté siempre
                 actualizado y en funcionamiento.
               </p>
@@ -116,13 +116,13 @@ const Video = () => {
 
             {/* Card 6 */}
             <div
-              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg dark:bg-stroke-dark"
               data-wow-delay=".9s"
             >
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Relación calidad-precio
               </h3>
-              <p className="mt-4 flex-grow text-gray-600">
+              <p className="mt-4 flex-grow text-gray-600 dark:text-white">
                 Precios justos y transparentes, con soluciones de alta calidad a
                 un costo accesible.
               </p>
@@ -130,13 +130,13 @@ const Video = () => {
 
             {/* Card 7 - SEO */}
             <div
-              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg"
+              className="wow animate__animated animate__fadeInLeft flex h-full flex-col rounded-lg bg-white p-6 shadow-lg dark:bg-stroke-dark"
               data-wow-delay="1.05s"
             >
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 SEO para atraer clientes de calidad
               </h3>
-              <p className="mt-4 flex-grow text-gray-600">
+              <p className="mt-4 flex-grow text-gray-600 dark:text-white">
                 Un buen SEO mejora la visibilidad en motores de búsqueda y atrae
                 clientes cualificados. Es clave para el éxito de cualquier
                 emprendimiento online.

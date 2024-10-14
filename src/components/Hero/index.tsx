@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -7,18 +8,33 @@ const Hero = () => {
         id="home"
         className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
-              <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+        <div className="container ">
+          <div className="-mx-4 flex flex-col w-full md:flex-row justify-center md:justify-evenly ">
+            <div className=" px-4 flex w-full	">
+              <div className="mx-auto max-w-[800px] text-left flex flex-col mt-9 ">
+                <h1 className="mb-5 text-center font-extrabold md:text-left  text-4xl leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-7xl md:leading-tight uppercase md:normal-case	">
                   Desarrollo y Diseño web a medida
                 </h1>
-                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                <p className="mb-12 text-base text-left !leading-relaxed text-black font-semibold dark:text-body-color-dark sm:text-lg md:text-2xl">
                 Lleva tu negocio al siguiente nivel con soluciones web personalizadas.
                 Creamos sitios web profesionales, rápidos y optimizados para ayudarte a destacar en línea, alcanzar más clientes y hacer crecer tu marca. Tu éxito digital comienza aquí.
                 </p>
                 
+              </div>
+            </div>
+            
+
+
+
+            <div className="flex justify-center md:items-center "> 
+              <div className="w-[32rem] h-[32rem] relative bottom-6 md:right-16 lg:right-0 lg:bottom-16" >
+                <Image
+                  src="/images/logo/devweb1.svg"
+                  alt="logo"
+                  style={{objectFit: 'contain'}}
+                  className="w-full dark:block"
+                  fill
+                />
               </div>
             </div>
           </div>
