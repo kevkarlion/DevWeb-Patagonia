@@ -39,7 +39,7 @@ const Header = () => {
   const usePathName = usePathname();
 
   return (
-    <div id="home">
+    <div id="home" style={{scrollMarginTop:'80px'}}>
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center ${
           sticky

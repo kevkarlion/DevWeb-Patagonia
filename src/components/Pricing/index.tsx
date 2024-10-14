@@ -8,7 +8,7 @@ const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
 
   return (
-    <section id="precios" className="relative z-10 py-16 md:py-20 lg:py-28">
+    <section id="precios" className="relative z-10 py-16 md:py-20 lg:py-28" style={{scrollMarginTop:'90px'}}>
       <div className="container">
         <SectionTitle
           title="Planes y Tarifas"

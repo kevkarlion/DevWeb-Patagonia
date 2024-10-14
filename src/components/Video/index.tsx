@@ -24,7 +24,7 @@ const Video = () => {
   }, []);
 
   return (
-    <section className="relative z-10 py-16 md:py-20 lg:py-28" id="propuesta">
+    <section className="relative z-10 py-16 md:py-20 lg:py-28" id="propuesta" style={{scrollMarginTop:'90px'}}>
       <div className="container">
         <SectionTitle
           title="Porque elegirnos"
