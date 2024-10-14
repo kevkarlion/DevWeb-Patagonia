@@ -15,7 +15,7 @@ const Hero = () => {
               <h1 className="mb-6 text-center font-extrabold text-4xl md:text-5xl leading-snug text-gray-800 dark:text-white sm:text-4xl md:text-left">
                 <span className="block text-[#d42629]">Diseño Web a Medida</span>
                 para Emprendedores - 
-                <span className="text-[#d42629]">Económico, Rápido</span> 
+                <span className="text-[#d42629]">Económico, Rápido </span> 
                 y <span className="text-[#d42629]">Optimizado</span> para Tu Negocio
               </h1>
               <h2 className="mb-4 text-left font-bold text-2xl md:text-2xl leading-tight text-gray-700 dark:text-gray-300">
