@@ -12,13 +12,16 @@ import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
 
-
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
-  // other metadata
+  title: "Desarrollo Web Profesional | DevWeb Patagonia",
+  description: "Ofrecemos servicios de desarrollo web a medida, diseño responsivo y soluciones digitales que se adaptan a las necesidades de tu negocio.",
+  keywords: "desarrollo web, diseño web, Next.js, WordPress, SEO, marketing digital, ecommerce",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
-
 
 
 export default function Home() {
