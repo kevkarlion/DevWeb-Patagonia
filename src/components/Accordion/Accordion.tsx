@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import { ContactCTA } from '../Cta';
 
 export const Accordion = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -44,7 +45,7 @@ export const Accordion = () => {
   ];
 
   return (
-    <div className="max-w-3xl mx-auto p-4">
+    <div className="max-w-3xl mx-auto p-4" id='faq' style={{scrollMarginTop: '110px'}}>
       <h2 className="text-3xl font-bold mb-6 text-center">Preguntas Frecuentes</h2>
       <div className="space-y-4">
         {faqs.map((faq, index) => (
@@ -64,6 +65,7 @@ export const Accordion = () => {
           </div>
         ))}
       </div>
+      <ContactCTA buttonText='No te quedes con dudas, estamos aquí para ayudarte'href='https://wa.me/542984252859'/>
     </div>
   );
 };

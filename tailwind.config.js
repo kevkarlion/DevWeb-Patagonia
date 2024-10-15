@@ -41,6 +41,7 @@ module.exports = {
         black: "#121723",
         dark: "#1D2430",
         primary: "#d42629",
+        redwhite: '#d56467',
         yellow: "#FBB040",
         "bg-color-dark": "#171C28",
         "body-color": {

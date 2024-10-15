@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24" id="contacto">
+      <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24" id="contacto" style={{scrollMarginTop:'125px'}}>
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-evenly ">
             <div className="w-full flex justify-center text-center px-4 md:w-1/2 lg:w-4/12 xl:w-5/12 ">
@@ -43,7 +43,7 @@ const Footer = () => {
                 <div className="flex flex-col">
                   <div className="mr-4 flex mb-9">
                     <a
-                      href="/"
+                      href="https://wa.me/542984252859"
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"

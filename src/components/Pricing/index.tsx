@@ -72,7 +72,7 @@ const PricingSection = () => {
       <p className="text-sm md:text-xl text-gray-600 dark:text-gray-300 text-center mb-4">
         ¡Hablemos sobre tu idea!
       </p>
-      <ContactCTA buttonText='Contactanos' />
+      <ContactCTA buttonText='Contactanos' href="https://wa.me/542984252859" />
     </div>
   );
 };
