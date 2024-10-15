@@ -43,7 +43,7 @@ export const metadata = {
     canonical: "https://tusitioweb.com",
   },
   icons: {
-    icon: "images/favicon.ico",
+    icon: "/images/favicon.ico",
   },
   robots: {
     index: true,
