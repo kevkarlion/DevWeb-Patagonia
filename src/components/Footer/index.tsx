@@ -40,14 +40,14 @@ const Footer = () => {
                   Contacto
                 </h4>
                 {/* Espacios para SVG adicionales */}
-                <div className="flex flex-col">
+                <div className="flex flex-col items-center ml-5">
                   <div className="mr-4 flex mb-9">
                     <a
                       href="https://wa.me/542984252859"
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary flex gap-3"
                     >
                       {/* Whatsapp */}
                       <svg
@@ -67,16 +67,16 @@ const Footer = () => {
                           fill="currentColor"
                         />
                       </svg>
+                      <span>Whatsapp</span>
                     </a>
-                    <span>Whatsapp</span>
                   </div>
-                  <div className="flex">
+                  <div className="mr-4 flex mb-9">
                     <a
                       href="https://www.instagram.com/devweb.patagonia/"
                       aria-label="social-link"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary flex gap-4"
                     >
                       <svg
                         width="22"
@@ -134,8 +134,8 @@ const Footer = () => {
                           </g>
                         </svg>
                       </svg>
-                    </a>
                     <span>Instagram</span>
+                    </a>
                   </div>
                 </div>
               </div>

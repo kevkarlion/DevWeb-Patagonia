@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
+import { Wtsapp } from '@/components/Wtsapp'
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
           <Header />
+          <Wtsapp />
           {children}
           <Footer />
           <ScrollToTop />

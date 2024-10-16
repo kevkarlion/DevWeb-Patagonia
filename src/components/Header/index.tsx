@@ -174,7 +174,7 @@ const Header = () => {
                         )}
                       </li>
                     ))}
-                    <Link href='#contacto' className="md:hidden text-base text-dark hover:text-primary dark:text-white/70" style={{scrollMarginTop:'125px'}} >Contacto</Link>
+                    <Link href='#contacto' className="md:hidden text-base text-dark hover:text-primary dark:text-white/70 py-2" style={{scrollMarginTop:'125px'}} >Contacto</Link>
                   </ul>
                 </nav>
               </div>
