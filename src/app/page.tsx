@@ -10,7 +10,7 @@ import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
-import { Metadata } from "next";
+
 
 export const metadata = {
   metadataBase: new URL("https://localhost:3000"), // Cambia esto por tu dominio real
@@ -61,6 +61,7 @@ export default function Home() {
   return (
     <div>
       <ScrollUp />
+      
       <Hero />
       <Features />
       <Video />

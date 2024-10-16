@@ -15,7 +15,7 @@ const checkIcon = (
 
 const AboutSectionOne = () => {
   const List = ({ text, description, number }) => (
-    <div className="mb-6 p-6 bg-white dark:bg-gray-800 shadow-md rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg wow fadeInUp" data-wow-delay={`${number * 0.2}s`}>
+    <div className="mb-6 p-6 bg-white dark:bg-darkCards shadow-md rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg wow fadeInUp" data-wow-delay={`${number * 0.2}s`}>
       <p className="flex items-center text-xl font-semibold text-gray-900 dark:text-white mb-2">
         <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-[#d42629] bg-opacity-10 text-primary">
           {checkIcon}
@@ -35,7 +35,7 @@ const AboutSectionOne = () => {
   }, []);
 
   return (
-    <section id="flujo" style={{ scrollMarginTop: '90px' }} className="pt-16 md:pt-20 lg:pt-28">
+    <section id="flujo" style={{ scrollMarginTop: '90px' }} className="pt-16 md:pt-20 lg:pt-28 dark:bg-darkSext">
       <div className="container">
         <div className="border-b border-gray-300 dark:border-gray-600 pb-16 md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">

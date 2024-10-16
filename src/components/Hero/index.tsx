@@ -6,7 +6,7 @@ const Hero = () => {
     <div>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-4 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[140px] xl:pt-[140px] 2xl:pb-[100px] 2xl:pt-[180px]"
+        className="relative z-10 overflow-hidden bg-white pb-4 pt-[120px] dark:bg-dark md:pb-[120px] md:pt-[150px] xl:pb-[140px] xl:pt-[140px] 2xl:pb-[100px] 2xl:pt-[180px]"
       >
         <div className="container flex justify-center">
           <div className="-mx-4 flex flex-col w-full md:flex-row justify-center md:justify-evenly ">
