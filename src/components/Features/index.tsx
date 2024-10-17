@@ -6,7 +6,8 @@ import { ContactCTA } from "../Cta";
 const Features = () => {
   return (
     <div>
-      <section id="servicios" className="py-16 md:py-20 lg:py-28 dark:bg-darkTwo" style={{scrollMarginTop:'90px'}}>
+      <section id="servicios" className="py-16 md:py-20 lg:py-28  dark:bg-darkTwo" style={{scrollMarginTop:'90px'}}>
+        
         <div className="container">
           <SectionTitle
             title="Soluciones web diseñadas para impulsar tu negocio"

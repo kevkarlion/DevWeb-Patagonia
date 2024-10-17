@@ -1,18 +1,29 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai';
 
 export const SidebarRedes = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Manejar el mouse enter y leave
-  const handleMouseEnter = () => {
-    setIsOpen(true);
-  };
+  // Detectar si es un dispositivo móvil
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Puedes ajustar este valor según lo necesites
+    };
+    
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
 
-  const handleMouseLeave = () => {
-    setIsOpen(false);
+  // Función para manejar el clic y el hover (en desktop)
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -20,12 +31,13 @@ export const SidebarRedes = () => {
       {/* Solapa */}
       <div 
         className={`relative transition-width duration-300 ease-in-out ${isOpen ? 'w-20' : 'w-10'}`} 
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onClick={isMobile ? toggleSidebar : null} // Click en móviles
+        onMouseEnter={!isMobile ? () => setIsOpen(true) : null} // Hover en desktop
+        onMouseLeave={!isMobile ? () => setIsOpen(false) : null} // Hover en desktop
       >
         {/* Solapa */}
         <div 
-          className={`flex items-center justify-center h-10 bg-primary text-white rounded-md cursor-pointer transition-all duration-300 ease-in-out`} 
+          className="flex items-center justify-center h-10 bg-primary text-white rounded-md cursor-pointer transition-all duration-300 ease-in-out"
         >
           {/* Flecha */}
           {isOpen ? (
