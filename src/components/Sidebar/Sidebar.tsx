@@ -10,7 +10,7 @@ export const SidebarRedes = () => {
   // Detectar si es un dispositivo móvil
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // Puedes ajustar este valor según lo necesites
+       (window.innerWidth <= 768); // Puedes ajustar este valor según lo necesites
     };
     
     checkIfMobile();

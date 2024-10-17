@@ -51,7 +51,7 @@ const Header = () => {
           <div className="relative -mx-4 flex items-center justify-between h-[120px]">
 
             
-            <div className="w-60 max-w-full px-4 xl:mr-12 relative">
+            <div className="w-72 max-w-full px-4 xl:mr-12 relative">
             <Link
                 href="/"
                 className={`header-logo block w-full ${
@@ -60,25 +60,15 @@ const Header = () => {
               >
                 
 
-                  <div className="w-18 h-20" style={{ position:'relative', top:'35px'}}>
-                    <Image
-                      src="/images/logo/devweb4.svg"
-                      alt="logo"
-                      style={{objectFit: 'contain'}}
-                      className="w-full dark:hidden"
-                      fill
-                    />
-                  </div>
-                
-
+             
 
                  
-                <div className="w-18 h-20" style={{ position:'relative', bottom:'45px'}}>
+                <div className="w-34 h-32" style={{ position:'relative', bottom:'px'}}>
                     <Image
-                      src="/images/logo/devweb4.svg"
+                      src="/images/logo/devwebNavbar.webp"
                       alt="logo"
                       style={{objectFit: 'contain'}}
-                      className="hidden w-full dark:block"
+                      className=" w-full"
                       fill
                     />
                   </div>
