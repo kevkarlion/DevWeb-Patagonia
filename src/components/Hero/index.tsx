@@ -38,7 +38,7 @@ const Hero = () => {
 
             {/* SVG en el lado derecho en pantallas grandes, y arriba en mobile */}
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0 md:ml-8"> {/* Espaciado izquierdo en pantallas medianas */}
-            <div className="h-[500px] w-[500px]" style={{ position:'relative', top:'0px'}}>
+            <div className="h-[400px] w-[500px]" style={{ position:'relative', top:'0px'}}>
               <Image
                 src="/images/hero/lottieHero.svg"
                 alt="logo"
