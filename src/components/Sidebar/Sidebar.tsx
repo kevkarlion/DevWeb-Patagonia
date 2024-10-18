@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from 'react';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai';
@@ -10,18 +10,18 @@ export const SidebarRedes = () => {
   // Detectar si es un dispositivo móvil
   useEffect(() => {
     const checkIfMobile = () => {
-       (window.innerWidth <= 768); // Puedes ajustar este valor según lo necesites
+      setIsMobile(window.innerWidth <= 768); // Ajustar el valor según el tamaño deseado
     };
     
-    checkIfMobile();
-    window.addEventListener('resize', checkIfMobile);
+    checkIfMobile(); // Inicializa la verificación
+    window.addEventListener('resize', checkIfMobile); // Actualiza en caso de cambio de tamaño
     
     return () => {
       window.removeEventListener('resize', checkIfMobile);
     };
   }, []);
 
-  // Función para manejar el clic y el hover (en desktop)
+  // Función para manejar el clic
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
@@ -31,11 +31,11 @@ export const SidebarRedes = () => {
       {/* Solapa */}
       <div 
         className={`relative transition-width duration-300 ease-in-out ${isOpen ? 'w-20' : 'w-10'}`} 
-        onClick={isMobile ? toggleSidebar : null} // Click en móviles
+        onClick={toggleSidebar} // Click tanto en mobile como en desktop
         onMouseEnter={!isMobile ? () => setIsOpen(true) : null} // Hover en desktop
         onMouseLeave={!isMobile ? () => setIsOpen(false) : null} // Hover en desktop
       >
-        {/* Solapa */}
+        {/* Botón de la solapa */}
         <div 
           className="flex items-center justify-center h-10 bg-primary text-white rounded-md cursor-pointer transition-all duration-300 ease-in-out"
         >
