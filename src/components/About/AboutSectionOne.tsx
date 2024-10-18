@@ -1,10 +1,11 @@
 'use client';
+
 import Image from 'next/image';
 import SectionTitle from '../Common/SectionTitle';
 import { useEffect } from 'react';
 import WOW from 'wowjs';
 import { ContactCTA } from '../Cta';
-import { Banner } from '../Banner';
+import { LottieAnimation } from '../LottieAnimation';
 
 // Icono del check con color primario
 const checkIcon = (
@@ -36,10 +37,10 @@ const AboutSectionOne = () => {
 
   return (
     <section id="flujo" style={{ scrollMarginTop: '90px' }} className="pt-16 md:pt-20 lg:pt-28 dark:bg-darkSext">
-      <div className="container">
+      <div className="container w-full">
         <div className="border-b border-gray-300 dark:border-gray-600 pb-16 md:pb-20 lg:pb-28">
-          <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
+          <div className="-mx-4 flex flex-col lg:flex-row flex-wrap items-center justify-center">
+            <div className="w-full px-4 lg:w-1/2 order-1">
               <SectionTitle
                 title="Nuestro Proceso de Trabajo"
                 paragraph="Cada proyecto es único, y hemos perfeccionado un proceso que garantiza soluciones de alta calidad. A continuación, te explicamos cada paso clave en nuestro flujo de trabajo."
@@ -82,9 +83,11 @@ const AboutSectionOne = () => {
               </div>
             </div>
 
-            <Banner />
+            <div className='order-2 w-full lg:w-1/2 flex justify-center'>
+              <LottieAnimation />
+            </div>
           </div>
-          <ContactCTA buttonText='Comienza tu proyecto con nosotros' href='https://wa.me/542984252859'/>
+          <ContactCTA buttonText='Comienza tu proyecto con nosotros' href='https://wa.me/542984252859' />
         </div>
       </div>
     </section>

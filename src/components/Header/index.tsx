@@ -60,7 +60,7 @@ const Header = () => {
                 } `}
               >
                 {/* Contenedor para el logo */}
-                <div className="w-auto h-[80px] flex items-center" >
+                <div className="w-auto h-[80px] flex " >
                   <Image
                     src="/images/logo/navbar-corregido.svg"
                     alt="logo"
