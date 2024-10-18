@@ -49,7 +49,7 @@ export const SidebarRedes = () => {
 
         {/* Enlaces de redes sociales */}
         <div 
-          className={`absolute right-0 bottom-10 w-32 bg-primary text-white rounded-md shadow-lg transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+          className={`absolute right-0 bottom-12 w-32 bg-primary text-white rounded-md shadow-lg transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         >
           <a
             href="https://www.instagram.com/devweb.patagonia/"
