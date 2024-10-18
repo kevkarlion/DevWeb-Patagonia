@@ -24,7 +24,10 @@ const Header = () => {
   };
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
-  });
+    return () => {
+      window.removeEventListener("scroll", handleStickyNavbar);
+    };
+  }, []);
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
@@ -39,47 +42,35 @@ const Header = () => {
   const usePathName = usePathname();
 
   return (
-    <div id="home" >
+    <div id="home">
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center ${
           sticky
             ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
             : "absolute bg-transparent"
-        }`} 
+        }`}
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between h-[120px]">
-
-            
-            <div className="w-72 max-w-full px-4 xl:mr-12 relative">
-            <Link
+            <div className="w-auto max-w-full px-4 xl:mr-12 relative">
+              <Link
                 href="/"
                 className={`header-logo block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
-                
-
-             
-
-                 
-                <div className="w-34 h-32" style={{ position:'relative', bottom:'px'}}>
-                    <Image
-                      src="/images/logo/devwebNavbar.webp"
-                      alt="logo"
-                      style={{objectFit: 'contain'}}
-                      className=" w-full"
-                      fill
-                    />
-                  </div>
-                
-
-
-
+                {/* Contenedor para el logo */}
+                <div className="w-auto h-[80px] flex items-center" >
+                  <Image
+                    src="/images/logo/navbar-corregido.svg"
+                    alt="logo"
+                    className="object-contain"
+                    width={200} // Ancho del logo
+                    height={80} // Alto del logo
+                  />
+                </div>
               </Link>
             </div>
-
-
 
             <div className="flex w-full items-center justify-between px-4 ">
               <div className="mr-9">
