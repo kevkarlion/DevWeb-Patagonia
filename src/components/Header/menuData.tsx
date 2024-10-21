@@ -39,6 +39,12 @@ const menuData: Menu[] = [
     path: "#precios",
     newTab: false,
   },
+  {
+    id: 7,
+    title: "Redes",
+    path: "#redes",
+    newTab: false,
+  },
   
 ];
 export default menuData;

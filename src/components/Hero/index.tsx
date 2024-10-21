@@ -7,7 +7,7 @@ const Hero = () => {
     <div>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-gray-light dark:bg-dark py-32 md:py-33 lg:py-40 xl:py-28"
+        className="relative z-10 overflow-hidden bg-gray-light dark:bg-dark py-48 md:py-48 lg:py-48 xl:py-48"
       >
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <div className="flex flex-col-reverse md:flex-row items-center justify-between">

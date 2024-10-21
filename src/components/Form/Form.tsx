@@ -7,11 +7,32 @@ export const ContactForm = () => {
     message: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false); // Para manejar el estado de envío
-  const [successMessage, setSuccessMessage] = useState(""); // Para mostrar mensajes de éxito
-  const [errorMessage, setErrorMessage] = useState(""); // Para mostrar mensajes de error
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  // Especificamos el tipo del evento
+  const [formErrors, setFormErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const validateForm = () => {
+    const errors: any = {};
+    if (!formData.name || formData.name.length < 3) {
+      errors.name = "El nombre debe tener al menos 3 caracteres.";
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      errors.email = "Por favor, ingresa un correo electrónico válido.";
+    }
+    if (!formData.message || formData.message.length < 10) {
+      errors.message = "El mensaje debe tener al menos 10 caracteres.";
+    }
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -20,11 +41,15 @@ export const ContactForm = () => {
       ...formData,
       [name]: value,
     });
+    setFormErrors({ ...formErrors, [name]: "" });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Evita la recarga de la página
-    setIsSubmitting(true); // Muestra estado de carga
+    e.preventDefault();
+    if (!validateForm()) {
+      return;
+    }
+    setIsSubmitting(true);
 
     try {
       const response = await fetch('/api/sendEmail', {
@@ -32,30 +57,35 @@ export const ContactForm = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData), // Enviamos los datos del formulario como JSON
+        body: JSON.stringify(formData),
       });
-      console.log(response.ok)
+
       if (response.ok) {
-        setSuccessMessage("Mensaje enviado correctamente."); // Mensaje de éxito
-        setFormData({ name: "", email: "", message: "" }); // Resetea el formulario
+        setSuccessMessage("Mensaje enviado correctamente.");
+        setFormData({ name: "", email: "", message: "" });
+
+        // Esto evitará cambios en el scroll.
+        const scrollPosition = window.pageYOffset;
+        setTimeout(() => {
+          window.scrollTo(0, scrollPosition);
+        }, 100);
       } else {
         throw new Error("Error enviando el mensaje");
       }
     } catch (error) {
-      setErrorMessage("Ocurrió un error al enviar el formulario."); // Mensaje de error
+      setErrorMessage("Ocurrió un error al enviar el formulario.");
     } finally {
-      setIsSubmitting(false); // Desactiva el estado de carga
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100 p-4 dark:bg-dark">
+    <div className="flex min-h-screen items-center justify-center bg-gray-100 p-4 dark:bg-dark" id="contacto"style={{scrollMarginTop:'80px'}} >
       <div className="w-full max-w-2xl rounded-lg bg-white p-8 shadow-lg dark:bg-darkTerciary">
         <h2 className="mb-6 text-center text-3xl font-bold text-gray-800 dark:text-white">
-          Envianos tu consulta
+          Envíanos tu consulta
         </h2>
 
-        {/* Mostrar mensaje de éxito o error */}
         {successMessage && (
           <p className="mb-4 text-center text-green-500">{successMessage}</p>
         )}
@@ -78,10 +108,13 @@ export const ContactForm = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="mt-2 w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`mt-2 w-full rounded-md border p-2 focus:outline-none focus:ring-2 ${formErrors.name ? "border-red-500" : "border-gray-300"} focus:ring-blue-500`}
                 placeholder="Tu nombre"
                 required
               />
+              {formErrors.name && (
+                <p className="text-red-500">{formErrors.name}</p>
+              )}
             </div>
             <div>
               <label
@@ -96,10 +129,13 @@ export const ContactForm = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="mt-2 w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`mt-2 w-full rounded-md border p-2 focus:outline-none focus:ring-2 ${formErrors.email ? "border-red-500" : "border-gray-300"} focus:ring-blue-500`}
                 placeholder="Tu email"
                 required
               />
+              {formErrors.email && (
+                <p className="text-red-500">{formErrors.email}</p>
+              )}
             </div>
           </div>
           <div>
@@ -114,11 +150,14 @@ export const ContactForm = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="mt-2 w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className={`mt-2 w-full rounded-md border p-2 focus:outline-none focus:ring-2 ${formErrors.message ? "border-red-500" : "border-gray-300"} focus:ring-blue-500`}
               rows={5}
               placeholder="Tu mensaje"
               required
             ></textarea>
+            {formErrors.message && (
+              <p className="text-red-500">{formErrors.message}</p>
+            )}
           </div>
           <div className="text-center">
             <button
