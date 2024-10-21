@@ -54,7 +54,7 @@ const Header = () => {
               href="/"
               className={`header-logo block ${sticky ? "py-5 lg:py-2" : "py-8"}`}
             >
-              <div className="flex h-auto lg:h-[140px] lg:w-[160px] xl:h-[100px] justify-center items-center">
+              <div className="flex h-auto lg:h-[140px] lg:w-[160px] xl:h-[140px] xl:w-[200px] xl:ml-6 justify-center items-center">
                 <Image
                   src="/images/logo/navbar-corregido.svg"
                   alt="logo"
