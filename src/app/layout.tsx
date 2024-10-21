@@ -6,6 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import { Wtsapp } from '@/components/Wtsapp'
 import { SidebarRedes } from "@/components/Sidebar";
+import { ContactForm } from "@/components/Form";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 
@@ -32,6 +33,7 @@ export default function RootLayout({
           <SidebarRedes />
           <Wtsapp />
           {children}
+          <ContactForm />
           <Footer />
           <ScrollToTop />
         </Providers>
