@@ -52,7 +52,7 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/sendEmail', {
+      const response = await fetch("/api/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,7 +64,6 @@ export const ContactForm = () => {
         setSuccessMessage("Mensaje enviado correctamente.");
         setFormData({ name: "", email: "", message: "" });
 
-        // Esto evitará cambios en el scroll.
         const scrollPosition = window.pageYOffset;
         setTimeout(() => {
           window.scrollTo(0, scrollPosition);
@@ -80,11 +79,19 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100 p-4 dark:bg-dark" id="contacto"style={{scrollMarginTop:'80px'}} >
+    <div
+      className="flex min-h-screen items-center justify-center bg-gray-100 py-24 dark:bg-dark"
+      id="contacto"
+      style={{ scrollMarginTop: "80px" }}
+    >
       <div className="w-full max-w-2xl rounded-lg bg-white p-8 shadow-lg dark:bg-darkTerciary">
         <h2 className="mb-6 text-center text-3xl font-bold text-gray-800 dark:text-white">
           Envíanos tu consulta
         </h2>
+        
+        <p className="mb-6 text-center text-gray-600 dark:text-gray-300">
+          Estamos aquí para ayudarte. Si tienes alguna consulta sobre nuestros servicios, deseas colaborar o simplemente quieres más información, no dudes en contactarnos. Estaremos encantados de asistirte en lo que necesites.
+        </p>
 
         {successMessage && (
           <p className="mb-4 text-center text-green-500">{successMessage}</p>
@@ -108,7 +115,9 @@ export const ContactForm = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`mt-2 w-full rounded-md border p-2 focus:outline-none focus:ring-2 ${formErrors.name ? "border-red-500" : "border-gray-300"} focus:ring-blue-500`}
+                className={`mt-2 w-full rounded-md border p-2 focus:outline-none focus:ring-2 ${
+                  formErrors.name ? "border-red-500" : "border-gray-300"
+                } focus:ring-blue-500`}
                 placeholder="Tu nombre"
                 required
               />
@@ -129,7 +138,9 @@ export const ContactForm = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`mt-2 w-full rounded-md border p-2 focus:outline-none focus:ring-2 ${formErrors.email ? "border-red-500" : "border-gray-300"} focus:ring-blue-500`}
+                className={`mt-2 w-full rounded-md border p-2 focus:outline-none focus:ring-2 ${
+                  formErrors.email ? "border-red-500" : "border-gray-300"
+                } focus:ring-blue-500`}
                 placeholder="Tu email"
                 required
               />
@@ -150,7 +161,9 @@ export const ContactForm = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className={`mt-2 w-full rounded-md border p-2 focus:outline-none focus:ring-2 ${formErrors.message ? "border-red-500" : "border-gray-300"} focus:ring-blue-500`}
+              className={`mt-2 w-full rounded-md border p-2 focus:outline-none focus:ring-2 ${
+                formErrors.message ? "border-red-500" : "border-gray-300"
+              } focus:ring-blue-500`}
               rows={5}
               placeholder="Tu mensaje"
               required
@@ -163,7 +176,11 @@ export const ContactForm = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`mt-4 w-full rounded-md bg-blue-500 p-2 text-white focus:outline-none ${isSubmitting ? "cursor-not-allowed opacity-50" : "hover:bg-blue-600"}`}
+              className={`mt-4 w-full rounded-md bg-blue-500 p-2 text-white focus:outline-none ${
+                isSubmitting
+                  ? "cursor-not-allowed opacity-50"
+                  : "hover:bg-blue-600"
+              }`}
             >
               {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
             </button>
