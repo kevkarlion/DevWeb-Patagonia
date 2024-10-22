@@ -67,7 +67,7 @@ const Header = () => {
           </div>
 
           {/* Options menu */}
-          <div className="flex items-center justify-around w-full">
+          <div className="flex items-center justify-around w-full ">
             <div className="mr-9">
               <button
                 onClick={navbarToggleHandler}
