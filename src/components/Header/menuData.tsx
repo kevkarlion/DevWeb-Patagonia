@@ -25,14 +25,26 @@ const menuData: Menu[] = [
     path: "#faq",
     newTab: false,
   },
-  
   {
     id: 5,
     title: "Flujo de trabajo",
     path: "#flujo",
     newTab: false,
+    submenu: [
+      {
+        id: 51,
+        title: "Galería de proyectos",
+        path: "#galeria", // Ruta a la galería de proyectos
+        newTab: false,
+      },
+      {
+        id: 52,
+        title: "Testimonios",
+        path: "#testimonios",
+        newTab: false,
+      },
+    ],
   },
- 
   {
     id: 6,
     title: "Precios",
@@ -45,6 +57,6 @@ const menuData: Menu[] = [
     path: "#redes",
     newTab: false,
   },
-  
 ];
+
 export default menuData;

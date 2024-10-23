@@ -1,0 +1,1 @@
+export { GaleriaTrabajos } from './GaleriaTrabajos'

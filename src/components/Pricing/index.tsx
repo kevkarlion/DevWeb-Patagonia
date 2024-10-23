@@ -14,8 +14,8 @@ const PricingSection = () => {
 
   return (
     <div className="py-28 bg-gray-50 dark:bg-darkQuint"  id='precios'  style={{scrollMarginTop:'90px'}}>
-      <div className="max-w-5xl mx-auto text-center ">
-        <h2 className="mb-6 dark text-center font-extrabold text-4xl md:text-5xl leading-snug text-gray-800 dark:text-white sm:text-4xl  ">
+      <div className="text-center">
+        <h2 className="mb-6 dark text-center font-extrabold text-4xl md:text-5xl leading-snug text-gray-800 dark:text-white sm:text-4xl">
           Tarifas y Opciones de Servicio
         </h2>
         <p className="mb-10 text-gray-600 wow fadeIn text-lg dark:text-white">

@@ -7,6 +7,8 @@ import { Inter } from "next/font/google";
 import { Wtsapp } from '@/components/Wtsapp'
 import { SidebarRedes } from "@/components/Sidebar";
 import { ContactForm } from "@/components/Form";
+import { CookieModal } from '@/components/CookieConsent'
+import { GaleriaTrabajos } from '@/components/GaleriaTrabajos'
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 
@@ -33,7 +35,9 @@ export default function RootLayout({
           <SidebarRedes />
           <Wtsapp />
           {children}
+          <GaleriaTrabajos />
           <ContactForm />
+          <CookieModal />
           <Footer />
           <ScrollToTop />
         </Providers>

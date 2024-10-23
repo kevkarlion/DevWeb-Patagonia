@@ -1,7 +1,7 @@
 export type Menu = {
   id: number;
   title: string;
-  path?: string;
+  path?: string; // Esta propiedad es opcional
   newTab: boolean;
-  submenu?: Menu[];
+  submenu?: Menu[]; // Esta propiedad es opcional y puede contener un arreglo de objetos Menu
 };
