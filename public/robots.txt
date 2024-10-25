@@ -1,5 +1,9 @@
-# robots.txt
+# *
 User-agent: *
 Allow: /
 
-Sitemap: https://dev-web-patagonia.vercel.app/
+# Host
+Host: https://dev-web-patagonia.vercel.app/
+
+# Sitemaps
+Sitemap: https://dev-web-patagonia.vercel.app/sitemap.xml
