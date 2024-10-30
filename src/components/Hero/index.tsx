@@ -7,7 +7,7 @@ const Hero = () => {
     <div>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-gray-light dark:bg-dark py-48 md:py-48 lg:py-48 xl:py-48"
+        className="relative z-10 overflow-hidden bg-gray-light dark:bg-dark pt-36 pb-24 md:py-48 lg:py-48 xl:py-48"
       >
         <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <div className="flex flex-col-reverse md:flex-row items-center justify-between">
@@ -24,7 +24,7 @@ const Hero = () => {
                 Nos adaptamos a tus necesidades para que tengas presencia online de manera efectiva. Te ofrecemos un diseño y desarrollo web personalizado para impulsar tu marca.
               </p>
 
-              <div className="mt-6 flex justify-center md:justify-start">
+              <div className="mt-11 flex justify-center md:justify-start">
                 <a 
                   href="https://wa.me/542984252859" 
                   target="_blank" 
