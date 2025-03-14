@@ -4,56 +4,36 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div>
-      <section
-        id="home"
-        className="relative z-10 overflow-hidden bg-gray-light dark:bg-dark pt-36 pb-24 md:py-48 lg:py-48 xl:py-48"
-      >
-        <div className="container mx-auto px-6 md:px-12 lg:px-24">
-          <div className="flex flex-col-reverse md:flex-row items-center justify-between">
-            {/* Texto del lado izquierdo en pantallas grandes, y abajo en mobile */}
-            <div className="w-full md:w-1/2 text-center md:text-left mb-6 md:mb-0 md:pr-8"> {/* Espaciado derecho en pantallas medianas */}
-              <h1 className="font-extrabold text-3xl md:text-5xl text-gray-800 dark:text-white leading-tight">
-                <span className="block">
-                  <span className="text-[#d42629]">Diseño</span> y <span className="text-[#d42629]">Desarrollo Web</span> Profesional
-                </span>
-                para <span className="text-[#d42629]">Emprendedores</span>
-              </h1>
-
-              <p className="mt-4 text-gray-600 dark:text-gray-400 text-md md:text-lg">
-                Nos adaptamos a tus necesidades para que tengas presencia online de manera efectiva. Te ofrecemos un diseño y desarrollo web personalizado para impulsar tu marca.
-              </p>
-
-              <div className="mt-11 flex justify-center md:justify-start">
-                <a 
-                  href="https://wa.me/542984252859" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-[#d42629] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#b01f21] transition duration-300 ease-in-out text-center"
-                >
-                  Solicita tu Consultoría Gratis
-                </a>
-              </div>
-            </div>
-
-            {/* SVG en el lado derecho en pantallas grandes, y arriba en mobile */}
-            <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0 md:ml-8"> {/* Espaciado izquierdo en pantallas medianas */}
-            <div className="h-[400px] w-[500px]" style={{ position:'relative', top:'0px'}}>
-              <Image
-                src="/images/hero/lottieHero.svg"
-                alt="logo"
-                style={{objectFit: 'contain'}}
-                className="w-full"
-                fill
-              />
-              </div>
-            </div>
-          </div>
+    <section
+      id="home"
+      className="relative flex items-center justify-center text-center text-white py-36 px-6 md:px-12 lg:px-24 bg-cover bg-center"
+      style={{ backgroundImage: "url('/images/bkg/bg-hero-nvo.webp')" }}
+    >
+      {/* Overlay para mejorar visibilidad del texto */}
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      
+      <div className="relative z-10 max-w-3xl mx-auto">
+        <h1 className="font-extrabold text-4xl md:text-6xl leading-tight">
+          <span className="text-red-600">Diseño</span> y <span className="text-red-600">Desarrollo Web</span> Profesional
+        </h1>
+        
+        <p className="mt-4 text-lg text-gray-300">
+          Nos adaptamos a tus necesidades para que tengas presencia online de manera efectiva. Diseño y desarrollo web personalizado para impulsar tu marca.
+        </p>
+        
+        <div className="mt-8">
+          <a 
+            href="https://wa.me/542984252859" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block bg-red-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-700 transition duration-300 ease-in-out"
+          >
+            Solicita tu Consultoría Gratis
+          </a>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
 export default Hero;
-
