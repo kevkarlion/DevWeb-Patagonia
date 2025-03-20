@@ -20,7 +20,7 @@ const Video = () => {
       <div className="container">
         <SectionTitle
           title="Porque elegirnos"
-          paragraph="Elegirnos significa contar con un equipo que entiende la resistencia inicial que muchos tienen al delegar en un socio digital. Sabemos que confiar en alguien para impulsar tu presencia online no es fácil, por eso, nos enfocamos en ofrecer soluciones claras, personalizadas y alineadas con los objetivos de tu negocio. No solo diseñamos sitios web; construimos herramientas que maximizan tus resultados, con soporte continuo y una atención enfocada en generar impacto desde el primer día."
+          paragraph="Ofrecemos soluciones claras, personalizadas y alineadas con los objetivos de tu negocio. No solo diseñamos sitios web, construimos herramientas que maximizan tus resultados, con soporte continuo y una atención enfocada en generar impacto desde el primer día."
           center
           mb="80px"
         />
