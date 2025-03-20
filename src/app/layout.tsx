@@ -8,7 +8,7 @@ import { Wtsapp } from '@/components/Wtsapp'
 import { SidebarRedes } from "@/components/Sidebar";
 import { ContactForm } from "@/components/Form";
 import { CookieModal } from '@/components/CookieConsent'
-import { GaleriaTrabajos } from '@/components/GaleriaTrabajos'
+
 import { SEOHead } from '@/components/shared/SEOHead'
 import "node_modules/react-modal-video/css/modal-video.css";
 import Head from 'next/head';
@@ -46,6 +46,7 @@ export default function RootLayout({
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
           <Header />
+          
           <SidebarRedes />
           <Wtsapp />
           {children}
