@@ -45,12 +45,12 @@ const menuData: Menu[] = [
       },
     ],
   },
-  {
-    id: 6,
-    title: "Precios",
-    path: "#precios",
-    newTab: false,
-  },
+  // {
+  //   id: 6,
+  //   title: "Precios",
+  //   path: "#precios",
+  //   newTab: false,
+  // },
   {
     id: 7,
     title: "Redes",
