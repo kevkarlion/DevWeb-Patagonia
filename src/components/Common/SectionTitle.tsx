@@ -12,7 +12,7 @@ const SectionTitle = ({
   mb?: string;
 }) => {
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center h-auto">
       <div
         className={`w-full ${center ? "text-center" : ""} flex flex-col flex-1`}
         style={{ maxWidth: width, marginBottom: mb }}
@@ -20,7 +20,7 @@ const SectionTitle = ({
         <h2 className="mb-4 text-3xl font-extrabold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px] uppercase md:normal-case">
           {title}
         </h2>
-        <p className="text-base !leading-relaxed text-body-color md:text-lg">
+        <p className="text-base !leading-relaxed text-white md:text-lg">
           {paragraph} 
         </p>
       </div>

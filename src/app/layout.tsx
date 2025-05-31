@@ -11,6 +11,7 @@ import { CookieModal } from '@/components/CookieConsent'
 
 import { SEOHead } from '@/components/shared/SEOHead'
 import "node_modules/react-modal-video/css/modal-video.css";
+import './globals.css';
 import Head from 'next/head';
 import "../styles/index.css";
 

@@ -87,5 +87,12 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark"], // Usa los temas predefinidos
+    darkTheme: "dark",
+    base: true,
+    styled: true,
+    utils: true,
+  },
 };
